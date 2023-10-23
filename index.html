@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Practice Russian Forms</title>
+		<link rel="stylesheet" href="./style.css">
+
+	</head>
+	<body>
+		<section>
+			<grid-container>
+				<grid_item>
+				<button id="btnFlip" class="fill">
+					<div id="prompt">loading...</div>
+					<div id="answer"> </div>
+				</button>
+				</grid_item>
+				<grid_item><button id="btnNext" class="fill">next</button></grid_item>
+			</grid-container>
+		</section>
+		<section>
+			<h1>Filters</h1>
+			<div class="margin-y"><span id="filteredSentencesCount"></span> sentences match current filters</div>
+			<form>
+				<button id="btnCheckAll" type="button"><strong>check all</strong></button>
+				<button id="btnUncheckAll" type="button"><strong>uncheck all</strong></button>
+				<div class="margin-y">
+					<span><strong>Sentence Level</strong></span>
+					<div class='form-check'>
+						<input class='form-check-input' id='sentenceLevelA1' type='checkbox' name='sentenceLevel' value='A1' checked/>
+						<label class='form-check-label' for='sentenceLevelA1'>A1</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='sentenceLevelA2' type='checkbox' name='sentenceLevel' value='A2' checked/>
+						<label class='form-check-label' for='sentenceLevelA2'>A2</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='sentenceLevelB1' type='checkbox' name='sentenceLevel' value='B1' checked/>
+						<label class='form-check-label' for='sentenceLevelB1'>B1</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='sentenceLevelB2' type='checkbox' name='sentenceLevel' value='B2' checked/>
+						<label class='form-check-label' for='sentenceLevelB2'>B2</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='sentenceLevelC1' type='checkbox' name='sentenceLevel' value='C1' checked/>
+						<label class='form-check-label' for='sentenceLevelC1'>C1</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='sentenceLevelC2' type='checkbox' name='sentenceLevel' value='C2' checked/>
+						<label class='form-check-label' for='sentenceLevelC2'>C2</label>
+					</div>
+				</div>
+				<div class="margin-y">
+					<span><strong>Word Type</strong></span>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordTypeNoun' type='checkbox' name='wordType' value='noun' checked/>
+						<label class='form-check-label' for='wordTypeNoun'>noun</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordTypePronoun' type='checkbox' name='wordType' value='pronoun' checked/>
+						<label class='form-check-label' for='wordTypePronoun'>pronoun</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordTypeAdjective' type='checkbox' name='wordType' value='adjective' checked/>
+						<label class='form-check-label' for='wordTypeAdjective'>adjective</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordTypeVerb' type='checkbox' name='wordType' value='verb' checked/>
+						<label class='form-check-label' for='wordTypeVerb'>verb</label>
+					</div>
+				</div>
+				<div class="margin-y">
+					<span><strong>Word Form</strong></span>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormSg' type='checkbox' name='formType' value='sg' checked=''>
+						<label class='form-check-label' for='wordFormSg'>singular</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormPl' type='checkbox' name='formType' value='pl' checked=''>
+						<label class='form-check-label' for='wordFormPl'>plural</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormNom' type='checkbox' name='formType' value='nom' checked=''>
+						<label class='form-check-label' for='wordFormNom'>nominative</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormAcc' type='checkbox' name='formType' value='acc' checked=''>
+						<label class='form-check-label' for='wordFormAcc'>accusative</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormGen' type='checkbox' name='formType' value='gen' checked=''>
+						<label class='form-check-label' for='wordFormGen'>genitive</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormPrep' type='checkbox' name='formType' value='prep' checked=''>
+						<label class='form-check-label' for='wordFormPrep'>prepositional</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormDat' type='checkbox' name='formType' value='dat' checked=''>
+						<label class='form-check-label' for='wordFormDat'>dative</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormInst' type='checkbox' name='formType' value='inst' checked=''>
+						<label class='form-check-label' for='wordFormInst'>instrumental</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormComparative' type='checkbox' name='formType' value='comparative' checked=''>
+						<label class='form-check-label' for='wordFormComparative'>comparative</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormSuperlative' type='checkbox' name='formType' value='superlative' checked=''>
+						<label class='form-check-label' for='wordFormSuperlative'>superlative</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormShort' type='checkbox' name='formType' value='short' checked=''>
+						<label class='form-check-label' for='wordFormShort'>short adjective</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormPresfut' type='checkbox' name='formType' value='presfut' checked=''>
+						<label class='form-check-label' for='wordFormPresfut'>present/future</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormPast' type='checkbox' name='formType' value='past' checked=''>
+						<label class='form-check-label' for='wordFormPast'>past</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormImperative' type='checkbox' name='formType' value='imperative' checked=''>
+						<label class='form-check-label' for='wordFormImperative'>command</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormGerund' type='checkbox' name='formType' value='gerund' checked=''>
+						<label class='form-check-label' for='wordFormGerund'>gerund</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormParticiple' type='checkbox' name='formType' value='participle' checked=''>
+						<label class='form-check-label' for='wordFormParticiple'>participle</label>
+					</div>
+					<div class='form-check'>
+						<input class='form-check-input' id='wordFormBare' type='checkbox' name='formType' value='bare' checked=''>
+						<label class='form-check-label' for='wordFormBare'>dictionary form</label>
+					</div>
+
+				</div>
+			</form>
+		</section>
+		<script src="./data.js"></script>
+		<script  src="./script.js"></script>
+
+	</body>
+</html>

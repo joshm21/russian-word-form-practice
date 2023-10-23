@@ -1,0 +1,44 @@
+body {
+  background-color: #8D99AE
+}
+
+grid-container {
+  display: grid;
+  grid-template-rows: 80% 20%;
+  grid-gap: 2vh;
+  height: 95vh;
+}
+
+grid_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border:none;
+  border-radius: 1rem;
+  cursor:pointer;
+}
+
+.fill {
+  font-size: 6vh;
+  width:100%;
+  height:100%;
+}
+
+.margin-y {
+  margin: 1rem 0;
+
+
+}
+
+#btnFlip {
+  background-color: #3A506B;
+  color: white
+}
+
+#btnNext {
+  background-color: #0B132B;
+  color: white;
+}
