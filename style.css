@@ -1,12 +1,12 @@
 body {
-  background-color: #8D99AE
+  background-color: #8D99AE;
+  font-size: 3rem;
 }
 
 grid-container {
   display: grid;
-  grid-template-rows: 80% 20%;
+  grid-template-rows: 80% 18%;
   grid-gap: 2vh;
-  height: 90vh;
 }
 
 grid_item {
@@ -19,6 +19,12 @@ button {
   border:none;
   border-radius: 1rem;
   cursor:pointer;
+  font-size: 3rem;
+}
+
+input {
+  width:3rem;
+  height:3rem;
 }
 
 .fill {
@@ -29,13 +35,19 @@ button {
 
 .margin-y {
   margin: 1rem 0;
+}
 
-
+#app {
+  height:90vh;
 }
 
 #btnFlip {
   background-color: #3A506B;
   color: white
+}
+
+#answer {
+  color: grey;
 }
 
 #btnNext {
